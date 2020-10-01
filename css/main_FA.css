@@ -1,0 +1,503 @@
+@font-face{
+    font-family:'yekan';
+    src:url(../fonts/yekan.woff);src:url(../fonts/yekan.eot?#iefix) format("embedded-opentype"),
+url(../fonts/yekan.woff) format("woff"),url(../fonts/yekan.ttf) format("truetype"),url(../fonts/yekan.svg#yekan) format("svg");
+    font-weight:normal;
+    font-style:normal
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'yekan';
+}
+html{
+    direction: ltr;
+    background-color: #eaf0ff;
+}
+p{
+    font-size:1.2em;
+    text-align: justify;
+    /*letter-spacing: 1px;*/
+    word-spacing:0;
+    font-family: 'yekan';
+}
+h1{
+    font-size: 1.9em;
+}
+header{
+    background-color: #25373b;
+}
+#wrapper{
+    width: auto;
+    height: auto;
+    margin: 15px auto ;
+}
+#wrapper>#slider{
+    width: 100%;
+    height:400px;
+    margin-bottom: 15px;
+    background-image: url("../images/slider/1.jpg");
+    background-position: center;
+    background-size: cover;
+    padding: 25px;
+}
+#wrapper>#artwork{
+    width: 100%;
+    height: 400px;
+    /*margin-bottom: 15px ;*/
+    /*background-color: #ccc;*/
+}
+#wrapper>#artwork>div{
+    width:45%;
+    height:400px;
+    float: right;
+    padding: 15px;
+    text-align: justify;
+    font-size: 13px;
+}
+#wrapper>#artwork>#right {
+    margin-top:1.3%;
+    margin-right:4% ;
+    background-color: #ffffff;
+    height:91%;
+}
+#wrapper>#artwork>#left {
+    margin-right: 2% ;
+}
+#wrapper>#artwork>#left>div{
+    width:45%;
+    height:48%;
+    float: right;
+    /*padding: 15px;*/
+    text-align: justify;
+    font-size: 13px;
+
+    position:relative;
+    overflow: hidden;
+}
+#wrapper>#artwork>#left>div:nth-child(1){
+    margin-right:2%;
+    background-image: url("../images/learning/html.jpg");
+    background-position: center;
+    background-size: cover;
+}
+#wrapper>#artwork>#left>div:nth-child(2){
+    margin-right:5%;
+    background-image: url("../images/learning/js.png");
+    background-position: center;
+    background-size: cover;
+}
+#wrapper>#artwork>#left>div:nth-child(3){
+    margin-right:2%;
+    margin-top: 2%;
+    background-image: url("../images/learning/php1.png");
+    background-position: center;
+    background-size: cover;
+}
+#wrapper>#artwork>#left>div:nth-child(4){
+    margin-right:5%;
+    margin-top: 2%;
+    background-image: url("../images/learning/seo1.png");
+    background-position: center;
+    background-size: cover;
+}
+#wrapper>#artwork>#right>img{
+    width:60%;
+    height:60%;
+    float:left;
+    margin-right: 10px;
+}
+#wrapper>#artwork>#right>p>a{
+    border: solid 1px blueviolet;
+    padding:3px;
+    text-decoration: none;
+    border-radius:5px;
+    background-color: blueviolet;
+    font-size:.7em;
+    color: white;
+}
+
+#main-footer{
+    width: auto;
+    height: 50px;
+    background-color: #25373b;
+    text-align: center;
+    line-height:50px;
+}
+/*برای لینک های داخلی*/
+#wrapper > #artwork > #left > div:hover > div {
+    bottom:0;
+}
+
+#wrapper > #artwork > #left > div  div {
+    width:100%;
+    height:30px;
+    background-color: rgba(0, 0, 0, .7);
+    text-align: center;
+    line-height:30px;
+    position: absolute;
+    bottom: -30px;
+    transition: all 1s linear;
+}
+
+#wrapper > #artwork > #left > div  div  a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/*flex*/
+#container{
+    margin:0 auto 1.5%;
+    width:96%;
+    min-height:250px;
+    /*background-color:#d3e2ff;*/
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: space-between;
+
+}
+#container>div{
+    width:32%;
+    height:250px;
+    background-color: #fff;
+    box-shadow:0 0 1px #666666;
+}
+#container>div>img{
+    width:50%;
+    height:50%;
+    float:left;
+    padding: 5px;
+    margin-right:5px;
+}
+#container>div>p{
+    font-family:'yekan';
+    font-size:.95em;
+    padding:3px;
+    text-align: justify;
+    word-spacing:0;
+    letter-spacing:0;
+}
+#container>div>p>a{
+    text-decoration: none;
+}
+
+
+/*رسپانسیو*/
+@media all and (max-width: 1199px){
+    #wrapper{
+        width: 100%;
+    }
+    #wrapper>#slider{
+        width: 100vw;
+        height: 33.33vw;
+    }
+    /*flex*/
+    #container{
+        margin:0 auto 1.5%;
+        width:96%;
+        min-height:250px;
+        /*background-color:#d3e2ff;*/
+        display:flex;
+        flex-wrap:wrap;
+        justify-content: space-between;
+
+    }
+    #container>div{
+        width:32%;
+        height:250px;
+        background-color: #fff;
+        box-shadow:0 0 1px #666666;
+    }
+    #container>div>img{
+        width:50%;
+        height:50%;
+        float:left;
+        padding: 5px;
+        margin-right:5px;
+    }
+    #container>div>p{
+        font-family:'yekan';
+        font-size:.9em;
+        padding:3px;
+        text-align: justify;
+        word-spacing:0;
+        letter-spacing:0;
+    }
+    #container>div>p>a{
+        text-decoration: none;
+    }
+}
+@media all and (max-width: 1024px) {
+    #wrapper>#artwork{
+        background: transparent;
+    }
+    #wrapper>#artwork>div{
+        width:100%;
+        margin: auto;
+    }
+    #wrapper>#artwork>#right{
+        width:100%;
+        margin: auto;
+    }
+    #wrapper>#artwork>#right>img{
+        width:50%;
+        height:90%;
+        margin-bottom: 2%;
+    }
+    #wrapper>#artwork>#left{
+        width:100%;
+        margin: auto;
+    }
+    #wrapper>#artwork>#left>div{
+        width:45%;
+        height:48%;
+        margin: auto;
+    }
+    #wrapper>#artwork >#left>div:nth-child(1){
+        margin-right:3%;
+    }
+    #wrapper>#artwork >#left>div:nth-child(2){
+        margin-right:3%;
+    }
+    #wrapper>#artwork >#left>div:nth-child(3){
+        margin-top:2%;
+        margin-right:3%;
+    }
+    #wrapper>#artwork >#left>div:nth-child(4){
+        margin-top:2%;
+        margin-right:3%;
+    }
+    #wrapper>#main-footer{
+        margin-top:2%;
+        clear:both;
+
+    }
+    /*flex*/
+    #container{
+        margin:0 auto 1.5%;
+        width:96%;
+        min-height:250px;
+        /*background-color:#d3e2ff;*/
+        display:flex;
+        flex-wrap:wrap;
+        justify-content: space-between;
+
+    }
+    #container>div{
+        width:32%;
+        height:250px;
+        background-color: #fff;
+        box-shadow:0 0 1px #666666;
+    }
+    #container>div>img{
+        width:50%;
+        height:50%;
+        float:left;
+        padding: 5px;
+        margin-right:5px;
+    }
+    #container>div>p{
+        font-family:'yekan';
+        font-size:.9em;
+        padding:3px;
+        text-align: justify;
+        word-spacing:0;
+        letter-spacing:0;
+    }
+    #container>div>p>a{
+        text-decoration: none;
+    }
+
+@media all and (max-width: 800px) {
+    #toggle-menu{
+    z-index: 2;
+    }
+    #wrapper>#slider{
+        text-align: center;
+        width: 100%;
+    }
+    #wrapper > #artwork {
+        height: auto;
+    }
+
+    #wrapper > #artwork > div {
+        width: 100%;
+        float: none;
+        height: auto;
+    }
+
+    #wrapper > #artwork > #right {
+        width: 100%;
+        margin: auto;
+    }
+
+    #wrapper > #artwork > #right > img {
+        width:30%;
+        height:30%
+        margin-bottom: 2%;
+    }
+
+    #wrapper > #artwork > #left {
+        width: 100%;
+        margin: auto;
+    }
+
+    #wrapper > #artwork > #left > div {
+        width: 160px;
+        height: 160px;
+        margin: auto;
+    }
+    #wrapper > #artwork > #left > div:nth-child(1) {
+        margin-bottom: 2%;
+    }
+    #wrapper > #artwork > #left > div:nth-child(2) {
+        margin-bottom: 2%;
+    }
+    /*چون قبلا به  child 3, 4 ،د margin-top داده بودیم پس باید آنها را صفر کنیم. */
+    #wrapper > #artwork > #left > div:nth-child(3) {
+
+        margin-top:0;
+        margin-bottom: 2%;
+    }
+    #wrapper > #artwork > #left > div:nth-child(4) {
+        margin-top:0;
+        margin-bottom: 2%;
+    }
+    /*flex*/
+    #container{
+        margin:0 auto 1.5%;
+        width:100%;
+        min-height:300px;
+        display:flex;
+        flex-wrap:wrap;
+        justify-content: space-between;
+    }
+    #container>div{
+        width:100%;
+        height:250px;
+        background-color: #fff;
+        box-shadow:0 0 1px #666666;
+    }
+    #container>#div2{
+        margin: 2% 0;
+    }
+    #container>div>img{
+        width:50%;
+        height:65%;
+        float:left;
+        padding:5px;
+        margin-right:5px;
+        margin-bottom: 2px;
+    }
+    #container>div>p{
+        font-family:'yekan';
+        font-size:1em;
+        padding:5px;
+        text-align: justify;
+        word-spacing:0;
+        letter-spacing:0;
+    }
+    #container>div>p>a{
+        text-decoration: none;
+    }
+
+    @media all and (max-width: 380px) {
+        #wrapper>#slider{
+            /*height: 125px;*/
+            width: 100%;
+        }
+        #wrapper>#slider>h1{
+            font-size: 1em;
+        }
+        #main-footer{
+            height: auto;
+            /*line-height: 50%;*/
+            font-size:.8em;
+        }
+        #wrapper > #artwork > #left > div {
+            width: 100%;
+            z-index: 1;
+        }
+        #wrapper > #artwork > #left > div:nth-child(4) {
+            margin-bottom:6%;
+        }
+        /*flex*/
+        #container{
+            margin:0 auto 1.5%;
+            width:100%;
+            min-height:300px;
+            display:flex;
+            flex-wrap:wrap;
+            justify-content: space-between;
+        }
+        #container>div{
+            width:100%;
+            height:300px;
+            background-color: #fff;
+            box-shadow:0 0 1px #666666;
+        }
+        #container>#div2{
+            margin: 2% 0;
+        }
+        #container>div>img{
+            width:100%;
+            height:50%;
+            float:left;
+            padding:1px;
+            margin-right:2px;
+            margin-bottom: 2px;
+        }
+        #container>div>p{
+            font-family:'yekan';
+            font-size:.8em;
+            padding:2px;
+            text-align: justify;
+            word-spacing:0;
+            letter-spacing:0;
+        }
+        #container>div>p>a{
+            text-decoration: none;
+        }
+    }
+    @media print{
+
+        /* you are under cover ;) */
+        /*body{
+            display: none;
+        }*/
+
+        /* black and white printer */
+        *{
+            color:#000;
+            background-color: #fff;
+        }
+
+
+        /* suppose we have advertisement */
+        .ads{
+            display:none;
+        }
+        #wrapper>#slider{
+            text-align: center;
+            /*height: auto;*/
+        }
+        #w1,#w2{
+            page-break-after: always;
+        }
+
+        #main-footer{
+            background-color: #fff;
+            border: 1px solid #000;
+        }
+        #menu-container{
+            display:none;
+        }
+        #wrapper>#main-footer{
+            margin-top: 300px;
+        }
+    }
+
+
+
